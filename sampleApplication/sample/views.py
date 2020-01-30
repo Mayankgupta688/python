@@ -13,3 +13,10 @@ def form(request):
 def addnumbers(request):
   addvalue = int(request.GET["firstNumber"]) + int(request.GET["secondNumber"])
   return render(request, "result.html", {'addvalue': addvalue})
+
+def postaddnumbers(request):
+  addvalue = int(request.POST["firstNumber"]) + int(request.POST["secondNumber"])
+  return render(request, "result.html", {'addvalue': addvalue})
+
+def postform(request):
+  return render(request, "postform.html")
